@@ -3,11 +3,11 @@ Requirements:
 - docker-compose
 
 How to execute:
-- docker-compose build 
-- docker-compose up
+- `docker-compose build` 
+- `docker-compose up`
 
 Project structure
-- Folder cmd\submer contains all the packages of the exercises
+- Folder `src/cmd/submer` contains all the packages of the exercises
 - exercise_one: 
     - main: A execution of the code given in the exercise
     - remove_duplicates: There are two versions of the function to compare in the benchmark
