@@ -1,0 +1,11 @@
+FROM golang:1.23
+
+WORKDIR /app
+
+COPY ./src/go.* ./
+RUN go mod download
+
+COPY ./src/ ./
+
+# Command to run the tests
+CMD ["go", "test", "-v", "./...", "-bench=", "Benchmark_RemoveDuplicates?", "-benchmem"]

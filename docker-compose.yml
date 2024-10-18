@@ -1,0 +1,15 @@
+services:
+  
+  submer-exercises-test:
+    build: 
+      context: .
+      dockerfile: docker/Test_Dockerfile
+  
+  submer-exercises-benchmark:
+    build: 
+      context: .
+      dockerfile: docker/Benchmark_Dockerfile
+    depends_on:
+      submer-exercises-test:
+        condition: service_completed_successfully
+        restart: false
